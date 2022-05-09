@@ -1,0 +1,11 @@
+.DS_Store
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+node_modules
+/assets/css/*
+/assets/js/*
+!/assets/css/.keep
+!/assets/js/.keep

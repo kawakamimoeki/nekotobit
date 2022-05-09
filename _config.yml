@@ -1,0 +1,23 @@
+title: 猫とbit
+url: https://nekotobit.yhmk.org
+
+description: 「猫とbit」は、猫好きの「ゆい」とソフトウェアエンジニアの「もえき」がそれぞれの切り口で日常を切り取るポッドキャストです。
+author: YHMK
+
+author_url: "https://yhmk.org/"
+download_url: "https://cache.nekotobit.yhmk.org"
+
+email: nekotobit@yhmk.org
+itunes_categories:
+  - Comedy
+
+date_format: ordinal
+
+language: ja
+explicit: "no"
+
+license: CC BY 4.0
+
+collections:
+  members:
+    output: true

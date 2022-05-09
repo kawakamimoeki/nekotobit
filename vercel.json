@@ -1,0 +1,32 @@
+{
+  "redirects": [
+    {
+      "source": "/apple",
+      "destination": "https://podcasts.apple.com/us/podcast/分からんラジオ/id1617493816"
+    },
+    {
+      "source": "/spotify",
+      "destination": "https://open.spotify.com/show/3QleUJ3vpFiEafMjBMv4Zq"
+    },
+    {
+      "source": "/google",
+      "destination": "https://podcasts.google.com/feed/aHR0cHM6Ly93YWthcmFuLnlobWsub3JnL2VwaXNvZGVzLm1wMy5yc3M"
+    },
+    {
+      "source": "/amazon",
+      "destination": "https://music.amazon.co.jp/podcasts/da518c15-b7ce-49fd-941b-78f9c0aa7504/分からんラジオ?refMarker=null&"
+    },
+    {
+      "source": "/contact",
+      "destination": "https://wakaran.yhmk.org/otayori"
+    },
+    {
+      "source": "/youtube",
+      "destination": "https://www.youtube.com/channel/UCoS4YRIDZx0K34RpHbw-yqQ"
+    },
+    {
+      "source": "/note",
+      "destination": "https://note.com/wakaranradio"
+    }
+  ]
+}

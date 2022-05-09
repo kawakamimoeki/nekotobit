@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P50R59GSVY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P50R59GSVY');
+  </script>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{{ site.title }} - {{ page.title | otherwise:site.subtitle }}</title>
+  <script src="https://kit.fontawesome.com/c0017a1f32.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta property="og:title" content="{{ site.title }} - {{ page.title | otherwise:site.subtitle }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url }}" />
+  <meta property="og:image" content="https://nekotobit.yhmk.org/img/artwork.jpg" />
+  <meta property="og:site_name" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/logo/apple-touch-icon-180x180.png">
+  {% if site.description %}<meta name="description" content="{{ site.description | markdownify | strip_html }}">{% endif %}
+  {% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <script src="/assets/js/main.js"></script>
+  <style>
+    .article ul {
+      list-style: square;
+    }
+    .article a {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="p-7 text-center m-auto" style="max-width: 400px; background-color: #fff6de;">
+  <header class="mt-5 mb-10">
+    <h1 class="font-bold text-2xl mb-5">
+      <a href="/">
+        <img width="200px" height="200px" src="/img/artwork.png" alt="{{ site.title }} logo" class="inline rounded-lg">
+      </a>
+    </h1>
+    <p class="mt-5">{{ site.description }}</p>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="mt-10">
+
+    <ul>
+      {% for subscription in site.data.subscriptions %}
+        <li><a target="_blank" href="{{ subscription.url }}"><img width="60%" src="{{ subscription.badge }}" class="mx-auto my-3" /></a></li>
+      {% endfor %}
+    </ul>
+    
+    <ul>
+      <li><a href="/members/">メンバー紹介</a></li>
+      <li><a target="_blank" href="https://twitter.com/wakaranradio">Twitter</a></li>
+      <li><a target="_blank" href="https://github.com/moekidev/nekotobit">Github</a></li>
+      <li><a target="_blank" href="https://yhmk.org">yhmk.org</a></li>
+      <li><a target="_blank" href="https://www.instagram.com/tgcats2022/">愉快な猫たち - Instagram</a></li>
+      <li><a target="_blank" href="https://moeki.dev">moeki.dev</a></li>
+    </ul>
+  </footer>
+</html>

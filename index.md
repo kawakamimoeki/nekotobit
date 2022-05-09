@@ -9,7 +9,7 @@ layout: default
   {% endfor %}
 </ul>
 
-<ul class="mb-2 flex">
+<ul class="mb-10 flex">
 {% for member in site.members -%}
   <li class="bg-white w-1/2 mx-2 p-3 rounded-lg">
     <h4 class="font-bold text-lg mb-2">
@@ -27,6 +27,9 @@ layout: default
 
 <ul>
 {% for episode in site.episodes -%}
+  {% assign today_second = 'now' | date: "%s" %}
+  {% assign episode_second = episode.date | date: "%s" %}
+  {% if today_second >= episode_second %}
   <li class="text-left mb-2">
     <header>
       <h2 class="inline"><a class="font-bold text-lg underline" href='{{ episode.url }}'>{{ episode.title }}</a></h2>
@@ -34,5 +37,6 @@ layout: default
     </header>
     <p>{{ episode.description }}</p>
   </li>
+  {% endif %}
 {% endfor %}
 </ul>

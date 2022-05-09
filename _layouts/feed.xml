@@ -38,8 +38,8 @@
     {% endfor %}
     {%- for episode in site.episodes -%}
       {% assign today_second = 'now' | date: "%s" %}
-      {% assign post_second = episode.date | date: "%s" %}
-      {% if today_second >= post_second %}
+      {% assign episode_second = episode.date | date: "%s" %}
+      {% if today_second >= episode_second %}
         <item>
           <title>{{ episode.title }}</title>
           <link>{{ site.url }}{{ episode.url }}</link>

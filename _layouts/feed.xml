@@ -37,7 +37,9 @@
     <itunes:category text="{{ category | xml_escape }}" />
     {% endfor %}
     {%- for post in site.posts -%}
-      {%- if post.audio[page.format] -%}
+      {% assign today_second = 'now' | date: "%s" %}
+      {% assign post_second = post.date | date: "%s" %}
+      {% if today_second >= post_second %}
         <item>
           <title>{{ post.title }}</title>
           <link>{{ site.url }}{{ post.url }}</link>
@@ -50,7 +52,7 @@
           <guid isPermaLink="false">{{ site.url }}{{ post.url }}</guid>
           <description><![CDATA[{{ post.content }}]]></description>
           <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
-          <enclosure url="{{ site.download_url }}/{{ post.audio[page.format].filename }}" type="{{ page.mimetype }}" />
+          <enclosure url="{{ site.download_url }}/{{ post.filename }}" type="audio/mpeg" />
           <itunes:keywords>{{ post.tags }}</itunes:keywords>
           <itunes:subtitle>{{ post.description }}</itunes:subtitle>
           <itunes:summary>{{ post.description }}</itunes:summary>
@@ -62,7 +64,7 @@
           <itunes:episode>{{ post.episode }}</itunes:episode>
           <itunes:explicit>{{ post.explicit }}</itunes:explicit>
         </item>
-      {%- endif -%}
+      {% endif %}
     {%- endfor -%}
   </channel>
 </rss>

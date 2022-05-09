@@ -18,7 +18,7 @@
 
     <itunes:summary>{{ site.description | markdownify | strip_html }}</itunes:summary>
     <itunes:author>{{ site.author }}</itunes:author>
-    <itunes:explicit>{{ site.explicit }}</itunes:explicit>
+    <itunes:explicit>no</itunes:explicit>
     <itunes:image href="{{ site.url }}/img/icon.jpg" />
     <itunes:owner>
       <itunes:name>{{ site.author }}</itunes:name>
@@ -36,33 +36,30 @@
     {% for category in site.itunes_categories %}
     <itunes:category text="{{ category | xml_escape }}" />
     {% endfor %}
-    {%- for post in site.posts -%}
+    {%- for episode in site.episodes -%}
       {% assign today_second = 'now' | date: "%s" %}
-      {% assign post_second = post.date | date: "%s" %}
+      {% assign post_second = episode.date | date: "%s" %}
       {% if today_second >= post_second %}
         <item>
-          <title>{{ post.title }}</title>
-          <link>{{ site.url }}{{ post.url }}</link>
-          <atom:link rel="http://podlove.org/deep-link" href="{{ site.url }}/players/{{ post.slug }}"/>
-          <comments>{{ site.url }}{{ post.url }}#disqus_thread</comments>
-          <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-          {% for category in post.categories %}
+          <title>{{ episode.title }}</title>
+          <link>{{ site.url }}{{ episode.url }}</link>
+          <atom:link rel="http://podlove.org/deep-link" href="{{ site.url }}/players/{{ episode.slug }}"/>
+          <comments>{{ site.url }}{{ episode.url }}#disqus_thread</comments>
+          <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+          {% for category in episode.categories %}
           <category><![CDATA[{{ category }}]]></category>
           {% endfor %}
-          <guid isPermaLink="false">{{ site.url }}{{ post.url }}</guid>
-          <description><![CDATA[{{ post.content }}]]></description>
-          <content:encoded><![CDATA[{{ post.content }}]]></content:encoded>
-          <enclosure url="{{ site.download_url }}/{{ post.filename }}" type="audio/mpeg" />
-          <itunes:keywords>{{ post.tags }}</itunes:keywords>
-          <itunes:subtitle>{{ post.description }}</itunes:subtitle>
-          <itunes:summary>{{ post.description }}</itunes:summary>
-          <itunes:author>{{ post.author | otherwise:site.author }}</itunes:author>
-          <itunes:duration>{{ post.duration }}</itunes:duration>
-          <itunes:order>{{ post.episode }}</itunes:order>
-          <itunes:season>{{ post.season }}</itunes:season>
-          <itunes:episodeType>{{ post.episode_type }}</itunes:episodeType>
-          <itunes:episode>{{ post.episode }}</itunes:episode>
-          <itunes:explicit>{{ post.explicit }}</itunes:explicit>
+          <guid isPermaLink="false">{{ site.url }}{{ episode.url }}</guid>
+          <description><![CDATA[{{ episode.content }}]]></description>
+          <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>
+          <enclosure url="{{ site.download_url }}/{{ episode.filename }}" type="audio/mpeg" />
+          <itunes:keywords>{{ episode.tags }}</itunes:keywords>
+          <itunes:subtitle>{{ episode.description }}</itunes:subtitle>
+          <itunes:summary>{{ episode.description }}</itunes:summary>
+          <itunes:author>{{ site.author }}</itunes:author>
+          <itunes:duration>{{ episode.duration }}</itunes:duration>
+          <itunes:episodeType>{{ episode.type }}</itunes:episodeType>
+          <itunes:explicit>no</itunes:explicit>
         </item>
       {% endif %}
     {%- endfor -%}

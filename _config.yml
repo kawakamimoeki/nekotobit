@@ -14,10 +14,11 @@ itunes_categories:
 date_format: ordinal
 
 language: ja
-explicit: "no"
 
 license: CC BY 4.0
 
 collections:
   members:
+    output: true
+  episodes:
     output: true

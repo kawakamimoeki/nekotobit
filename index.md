@@ -26,13 +26,13 @@ layout: default
 </ul>
 
 <ul>
-{% for post in site.posts -%}
+{% for episode in site.episodes -%}
   <li class="text-left mb-2">
     <header>
-      <h2 class="inline"><a class="font-bold text-lg underline" href='{{ post.url }}'>{{ post.title }}</a></h2>
-      <time class="opacity-80" datetime="{{ post.date }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <h2 class="inline"><a class="font-bold text-lg underline" href='{{ episode.url }}'>{{ episode.title }}</a></h2>
+      <time class="opacity-80" datetime="{{ episode.date }}">{{ episode.date | date: "%Y-%m-%d" }}</time>
     </header>
-    <p>{{ post.description }}</p>
+    <p>{{ episode.description }}</p>
   </li>
 {% endfor %}
 </ul>

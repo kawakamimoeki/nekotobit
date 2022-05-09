@@ -43,16 +43,8 @@
   <main>
     {{ content }}
   </main>
-  <footer class="mt-10">
-
+  <footer class="mt-10">    
     <ul>
-      {% for subscription in site.data.subscriptions %}
-        <li><a target="_blank" href="{{ subscription.url }}"><img width="60%" src="{{ subscription.badge }}" class="mx-auto my-3" /></a></li>
-      {% endfor %}
-    </ul>
-    
-    <ul>
-      <li><a href="/members/">メンバー紹介</a></li>
       <li><a target="_blank" href="https://twitter.com/wakaranradio">Twitter</a></li>
       <li><a target="_blank" href="https://github.com/moekidev/nekotobit">Github</a></li>
       <li><a target="_blank" href="https://yhmk.org">yhmk.org</a></li>

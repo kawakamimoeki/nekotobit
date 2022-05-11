@@ -1,6 +1,6 @@
 -
   name: RSS
-  url: /episodes.mp3.rss
+  url: /episodes.xml
   badge: /img/badges/rss.svg
 -
   name: Apple Podcast

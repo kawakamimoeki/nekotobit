@@ -1,6 +1,6 @@
 -
   name: RSS
-  url: /episodes.xml
+  url: https://nekotobit.net/episodes.xml
   badge: /img/badges/rss.svg
 -
 #   name: Apple Podcast

@@ -3,12 +3,6 @@ title: トップページ
 layout: default
 ---
 
-<ul class="mb-10">
-  {% for subscription in site.data.subscriptions %}
-    <li><a target="_blank" href="{{ subscription.url }}"><img width="60%" src="{{ subscription.badge }}" class="mx-auto my-3" /></a></li>
-  {% endfor %}
-</ul>
-
 <ul>
 {% for episode in site.episodes -%}
   {% assign today_second = 'now' | date: "%s" %}

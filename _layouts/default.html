@@ -47,7 +47,13 @@
   <main>
     {{ content }}
   </main>
-  <footer class="mt-10">    
+  <footer class="mt-10">   
+    <ul class="mb-10">
+      {% for subscription in site.data.subscriptions %}
+        <li><a target="_blank" href="{{ subscription.url }}"><img width="60%" src="{{ subscription.badge }}" class="mx-auto my-3" /></a></li>
+      {% endfor %}
+    </ul>
+     
     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
     <small>&copy; Nekotobit</small>
   </footer>

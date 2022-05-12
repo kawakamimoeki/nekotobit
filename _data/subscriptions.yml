@@ -6,15 +6,15 @@
 #   name: Apple Podcast
 #   url: https://podcasts.apple.com/us/podcast/分からんラジオ/id1617493816
 #   badge: /img/badges/apple.svg
-# -
-#   name: Spotify
-#   url: https://open.spotify.com/show/3VKRKQCpZtOEOUfnafxhpU
-#   badge: /img/badges/spotify.png
+-
+  name: Spotify
+  url: https://open.spotify.com/show/3VKRKQCpZtOEOUfnafxhpU
+  badge: /img/badges/spotify.png
 # -
 #   name: Google Podcast
 #   url: https://podcasts.google.com/feed/aHR0cHM6Ly93YWthcmFuLnlobWsub3JnL2VwaXNvZGVzLm1wMy5yc3M
 #   badge: /img/badges/google.png
 # -
-#   name: Amazon Music
-#   url: https://music.amazon.co.jp/podcasts/da518c15-b7ce-49fd-941b-78f9c0aa7504/分からんラジオ?refMarker=null&
-#   badge: /img/badges/amazon.png
+  name: Amazon Music
+  url: https://q4k0kx5j.r.us-east-1.awstrack.me/L0/https:%2F%2Fmusic.amazon.co.jp%2Fpodcasts%2F713fb7f5-a2fb-465a-ac6c-ca515fd487a0/1/01000180b85d2cbf-c19ef09f-fd8b-4357-b102-043bdcfe0d74-000000/CGNCSwBj0pMTxqo5qEE_N3D7pa4=270
+  badge: /img/badges/amazon.png

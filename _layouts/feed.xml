@@ -33,9 +33,9 @@
       <url>{{ site.url }}/img/artwork.png</url>
       <link>{{ site.url }}</link>
     </image>
-    {% for category in site.itunes_categories %}
-    <itunes:category text="{{ category | xml_escape }}" />
-    {% endfor %}
+    <itunes:category text="Comedy">
+      <itunes:category text="Stand-up" />
+    </itunes:category>
     {%- for episode in site.episodes -%}
       {% assign today_second = 'now' | date: "%s" %}
       {% assign episode_second = episode.date | date: "%s" %}
@@ -46,9 +46,6 @@
           <atom:link rel="http://podlove.org/deep-link" href="{{ site.url }}/players/{{ episode.slug }}"/>
           <comments>{{ site.url }}{{ episode.url }}#disqus_thread</comments>
           <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
-          {% for category in episode.categories %}
-          <category><![CDATA[{{ category }}]]></category>
-          {% endfor %}
           <guid isPermaLink="false">{{ site.url }}{{ episode.url }}</guid>
           <description><![CDATA[{{ episode.content }}]]></description>
           <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>

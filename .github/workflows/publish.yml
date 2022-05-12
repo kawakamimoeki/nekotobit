@@ -1,7 +1,7 @@
 name: publish
 on:
   schedule:
-    - cron: '0 1 * * 6'
+    - cron: '0 21 * * 4'
 jobs:
   my_cron_job:
     name: hogehoge

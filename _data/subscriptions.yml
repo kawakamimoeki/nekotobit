@@ -2,7 +2,7 @@
   name: RSS
   url: /episodes.xml
   badge: /img/badges/rss.svg
-# -
+-
 #   name: Apple Podcast
 #   url: https://podcasts.apple.com/us/podcast/分からんラジオ/id1617493816
 #   badge: /img/badges/apple.svg
@@ -14,7 +14,7 @@
 #   name: Google Podcast
 #   url: https://podcasts.google.com/feed/aHR0cHM6Ly93YWthcmFuLnlobWsub3JnL2VwaXNvZGVzLm1wMy5yc3M
 #   badge: /img/badges/google.png
-# -
+-
   name: Amazon Music
   url: https://q4k0kx5j.r.us-east-1.awstrack.me/L0/https:%2F%2Fmusic.amazon.co.jp%2Fpodcasts%2F713fb7f5-a2fb-465a-ac6c-ca515fd487a0/1/01000180b85d2cbf-c19ef09f-fd8b-4357-b102-043bdcfe0d74-000000/CGNCSwBj0pMTxqo5qEE_N3D7pa4=270
   badge: /img/badges/amazon.png

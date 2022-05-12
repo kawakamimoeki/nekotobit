@@ -52,7 +52,7 @@
           <guid isPermaLink="false">{{ site.url }}{{ episode.url }}</guid>
           <description><![CDATA[{{ episode.content }}]]></description>
           <content:encoded><![CDATA[{{ episode.content }}]]></content:encoded>
-          <enclosure url="{{ site.download_url }}/{{ episode.filename }}" type="audio/mpeg" />
+          <enclosure url="{{ site.download_url }}/{{ episode.filename }}" type="audio/mpeg" length="{{ episode.filesize }}"/>
           <itunes:keywords>{{ episode.tags }}</itunes:keywords>
           <itunes:subtitle>{{ episode.description }}</itunes:subtitle>
           <itunes:summary>{{ episode.description }}</itunes:summary>

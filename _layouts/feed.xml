@@ -33,9 +33,7 @@
       <url>{{ site.url }}/img/artwork.png</url>
       <link>{{ site.url }}</link>
     </image>
-    <itunes:category text="Comedy">
-      <itunes:category text="Stand-Up" />
-    </itunes:category>
+    <itunes:category text="{{ site.category }}" />
     {%- for episode in site.episodes -%}
       {% assign today_second = 'now' | date: "%s" %}
       {% assign episode_second = episode.date | date: "%s" %}

@@ -4,9 +4,9 @@ description: ありがとう、iPod。使ったことないけど。
 date: 2022-05-11 6:00:00 +0900
 layout: episode
 duration: '00:17:48'
-filename: ep1.mp3
+filename: ipod.mp3
 filesize: 21365467
-permalink: /1/
+permalink: /ipod/
 ---
 
 {{ page.description }}

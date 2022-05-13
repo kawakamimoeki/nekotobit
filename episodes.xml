@@ -22,7 +22,7 @@
     <itunes:summary>{{ site.description | markdownify | strip_html }}</itunes:summary>
     <itunes:author>{{ site.author }}</itunes:author>
     <itunes:explicit>no</itunes:explicit>
-    <itunes:image href="{{ site.url }}/img/artwork.png" />
+    <itunes:image href="{{ site.url }}/img/artwork.jpg" />
     <itunes:owner>
       <itunes:name>{{ site.author }}</itunes:name>
       <itunes:email>{{ site.email }}</itunes:email>
@@ -33,7 +33,7 @@
     <itunes:keywords>{{ site.keywords | join:', ' }}</itunes:keywords>
     <image>
       <title>{{ site.title }}</title>
-      <url>{{ site.url }}/img/artwork.png</url>
+      <url>{{ site.url }}/img/artwork.jpg</url>
       <link>{{ site.url }}</link>
     </image>
     <itunes:category text="{{ site.category }}" />

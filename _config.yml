@@ -18,7 +18,5 @@ language: ja
 license: CC BY 4.0
 
 collections:
-  members:
-    output: true
   episodes:
     output: true

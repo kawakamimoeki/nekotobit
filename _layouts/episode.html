@@ -7,4 +7,28 @@ layout: default
 
 <div class="text-left article">
   {{ page.content }}
+
+  <h3 class="mt-5 text-lg text-center font-bold">自動文字起こし</h3>
+
+  {% for transcripts_hash in site.data.transcripts %}
+  {% assign transcript = transcripts_hash[1] %}
+  <dl>
+  {% for results in transcript.results %}
+    {% assign amount = results.alternatives[0].words[0].startTime | remove: 's' %}
+    {% assign hour = amount | divided_by: 3600 | floor %}
+    {% assign minute = amount | modulo: 3600 | divided_by: 60 | floor %}
+    {% if minute < 10 %}
+      {% assign minute = '0' | append: minute %}
+    {% endif %}
+    {% assign second = amount | modulo: 60 | floor %}
+    {% if second < 10 %}
+      {% assign second = '0' | append: second %}
+    {% endif %}
+    <dt class="font-bold mt-3">{{ hour }}:{{ minute }}:{{ second }}</dt>
+    <dd>
+      {{ results.alternatives[0].transcript }}
+    </dd>
+  {% endfor %}
+  </dl>
+  {% endfor %}
 </div>

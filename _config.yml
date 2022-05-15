@@ -20,3 +20,13 @@ license: CC BY 4.0
 collections:
   episodes:
     output: true
+
+plugins:
+  - jekyll-sitemap
+
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/feed.xml"
+    include_posts:
+        - "/index.html"

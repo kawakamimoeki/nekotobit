@@ -15,8 +15,6 @@ date_format: ordinal
 
 language: ja
 
-license: CC BY 4.0
-
 collections:
   episodes:
     output: true

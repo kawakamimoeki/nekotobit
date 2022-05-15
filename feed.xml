@@ -28,7 +28,6 @@
       <itunes:email>{{ site.email }}</itunes:email>
     </itunes:owner>
     <managingEditor>{{site.email}} ({{site.author}})</managingEditor>
-    <copyright>{{ site.license }}</copyright>
     <itunes:subtitle>{{ site.subtitle }}</itunes:subtitle>
     <itunes:keywords>{{ site.keywords | join:', ' }}</itunes:keywords>
     <image>

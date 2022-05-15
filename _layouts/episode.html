@@ -9,7 +9,7 @@ layout: default
   {{ page.content }}
 
   <h3 class="mt-5 text-lg text-center font-bold">自動文字起こし</h3>
-  <p>音声認識には <a href="https://cloud.google.com/speech-to-text?hl=ja">Speech-to-Text | Google Cloud</a> を利用しています。</p>
+  <p>音声認識には <a href="https://cloud.google.com/speech-to-text?hl=ja">Google Cloud Speech-to-Text</a> を利用しています。</p>
 
   {% for transcripts_hash in site.data.transcripts %}
   {% assign transcript = transcripts_hash[1] %}

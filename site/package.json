@@ -7,16 +7,10 @@
   "author": "moekidev <me@moeki.dev>",
   "license": "MIT",
   "scripts": {
-    "dev:js": "rollup -c rollup.config.js --watch",
     "dev:css": "tailwindcss -i ./frontend/css/main.css -o ./assets/css/main.css --watch -c ./tailwind.config.cjs",
-    "build:css": "tailwindcss -i ./frontend/css/main.css -o ./assets/css/main.css -c ./tailwind.config.cjs",
-    "build:js": "rollup -c rollup.config.js"
+    "build:css": "tailwindcss -i ./frontend/css/main.css -o ./assets/css/main.css -c ./tailwind.config.cjs"
   },
   "devDependencies": {
-    "@hotwired/stimulus": "^3.0.1",
-    "rollup": "^2.71.1",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-stimulus": "^0.0.1",
     "tailwindcss": "^3.0.23"
   }
 }

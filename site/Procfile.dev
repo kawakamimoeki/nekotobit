@@ -1,3 +1,2 @@
 site: bundle exec jekyll serve
 tailwind: yarn dev:css
-rollup: yarn dev:js

@@ -1,11 +1,6 @@
-.DS_Store
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
+audio/*
+!audio/.keep
+img/*
+!img/.keep
 vendor
-node_modules
-/assets/css/*
-/assets/js/*
-!/assets/css/.keep
-!/assets/js/.keep
+automation.yml

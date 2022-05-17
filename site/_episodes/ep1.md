@@ -7,6 +7,19 @@ duration: '00:17:48'
 filename: ep1.mp3
 filesize: 9044386
 permalink: /1/
+chapters:
+  -
+    time: 00:00:00
+    title: イントロ
+  -
+    time: 00:01:43
+    title: iPod の思い出
+  -
+    time: 00:08:58
+    title: 最近のウォークマン
+  - 
+    time: 00:12:01
+    title: STEM PLAYER
 ---
 
 {{ page.description }}

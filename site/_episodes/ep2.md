@@ -7,6 +7,25 @@ duration: '00:27:10'
 filename: ep2.mp3
 filesize: '26587431'
 permalink: /2/
+chapters:
+  -
+    time: 00:00:00
+    title: イントロ
+  -
+    time: 00:01:01
+    title: 発表されたデバイス
+  -
+    time: 00:02:26
+    title: Google アシスタント
+  -
+    time: 00:08:24
+    title: スマートグラス
+  -
+    time: 00:15:05
+    title: Google レンズ
+  -
+    time: 00:26:33
+    title: アウトロ
 ---
 
 {{ page.description }}

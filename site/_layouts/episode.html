@@ -15,6 +15,26 @@ layout: default
 <div class="text-left article">
   {{ page.content }}
 
+  <h3 class="mt-5 text-lg text-center font-bold">チャプター</h3>
+  <ul>
+    {% for chapter in page.chapters %}
+    {% assign hour = chapter.time | divided_by: 3600 | floor %}
+    {% assign minute = chapter.time | modulo: 3600 | divided_by: 60 | floor %}
+    {% if minute < 10 %}
+      {% assign minute = '0' | append: minute %}
+    {% endif %}
+    {% assign second = chapter.time | modulo: 60 | floor %}
+    {% if second < 10 %}
+      {% assign second = '0' | append: second %}
+    {% endif %}
+    <li class="my-3">
+      <a href="{{ page.url }}#t={{ chapter.time }}">
+        <span>{{ chapter.title }} </span>
+        <span class="text-sm opacity-50">{{ hour }}:{{ minute }}:{{ second }}</span></a>
+    </li>
+    {% endfor %}
+  </ul>
+
   <h3 id="transcript" class="mt-5 text-lg text-center font-bold">自動文字起こし</h3>
   <p>音声認識には <a href="https://cloud.google.com/speech-to-text?hl=ja">Google Cloud Speech-to-Text</a> を利用しています。</p>
 

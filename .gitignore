@@ -5,3 +5,6 @@ img/*
 vendor
 automation.yml
 .DS_Store
+.env
+transcript/*
+!transcript/operations/.keep

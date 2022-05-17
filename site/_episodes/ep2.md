@@ -1,5 +1,4 @@
 ---
-id: '2'
 title: 'Episode 2: 起きてる間ずっとググってる'
 description: 'Google I/O 2022 についてお話しました。'
 date: '2022-05-18 6:00:00 +0900'

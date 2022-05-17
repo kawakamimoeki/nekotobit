@@ -1,5 +1,4 @@
 ---
-id: 1
 title: 'Episode 1: iPod touch 生産終了'
 description: ありがとう、iPod。使ったことないけど。
 date: 2022-05-11 6:00:00 +0900

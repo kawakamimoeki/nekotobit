@@ -21,12 +21,14 @@ task :podcast, ['ep', 'title', 'description'] do |_, args|
 
   `mp3gain -r #{mp3}`
 
+  `mp3chaps -i #{mp3}`
+
   date = Time.current.beginning_of_week(:wednesday).since(1.week).strftime("%Y-%m-%d")
   filesize = File.size(mp3)
   duration = Time.at(Mp3Info.open(mp3).length).utc.strftime("%H:%M:%S")
 
   File.write(
-    File.join(__dir__, "site", "_episodes", "#{ep}.md"),
+    File.join(__dir__, "site", "_episodes", "ep#{ep}.md"),
     ERB.new(File.read(File.join(__dir__, "site", "_episodes", "_template.md.erb"))).result(binding)
   )
 

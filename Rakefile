@@ -5,7 +5,7 @@ require "active_support"
 require "active_support/core_ext"
 
 desc "Convert and Upload mp3"
-task :podcast, ['ep', 'title', 'description'] do |_, args|
+task :convert, ['ep', 'title', 'description'] do |_, args|
   ep = args.ep
   title = args.title
   description = args.description
@@ -31,6 +31,9 @@ task :podcast, ['ep', 'title', 'description'] do |_, args|
     File.join(__dir__, "site", "_episodes", "ep#{ep}.md"),
     ERB.new(File.read(File.join(__dir__, "site", "_episodes", "_template.md.erb"))).result(binding)
   )
+end
 
-  `gsutil cp #{mp3} gs://nekotobit-episodes/`
+desc "Upload mp3"
+task :upload, ['mp3'] do |_, args|
+  `gsutil cp #{args.mp3} gs://nekotobit-episodes/`
 end

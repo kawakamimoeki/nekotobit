@@ -4,3 +4,4 @@ img/*
 !img/.keep
 vendor
 automation.yml
+.DS_Store

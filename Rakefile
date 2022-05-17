@@ -6,19 +6,18 @@ require "active_support/core_ext"
 
 desc "Convert and Upload mp3"
 task :podcast, ['ep', 'title', 'description'] do |_, args|
-  gcs_bucket = config["gcs_bucket"]
   ep = args.ep
   title = args.title
   description = args.description
 
-  artwork = File.join(__dir__, "artwork.jpg")
-  raw = File.join(__dir__, "ep#{ep}-raw.wav")
-  mp3 = File.join(__dir__, "ep#{ep}.mp3")
-  wav = File.join(__dir__, "ep#{ep}.wav")
+  artwork = File.join(__dir__, "img", "artwork.jpg")
+  raw = File.join(__dir__, "audio", "ep#{ep}-raw.wav")
+  mp3 = File.join(__dir__, "audio", "ep#{ep}.mp3")
+  wav = File.join(__dir__, "audio", "ep#{ep}.wav")
 
   `ffmpeg -ss 2 -i #{raw} #{wav}`
 
-  `lame --tt #{title} --ta 'Moeki Kawakami' --tl 猫とbit --ty #{Date.today.year} --ti #{artwork} --noreplaygain -q 2 --cbr -b 64 -m m --resample 44.1 --add-id3v2 #{wav} #{mp3}`
+  `lame --tt '#{title}' --ta 'Moeki Kawakami' --tl '猫とbit' --ty '#{Date.today.year}' --ti #{artwork} --add-id3v2 #{wav} #{mp3}`
 
   `mp3gain -r #{mp3}`
 

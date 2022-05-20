@@ -1,5 +1,5 @@
 ---
-title: 'iPod のこりこり'
+title: 'iPod のコリコリ'
 description: 'iPod touch が生産終了し、Apple はようやく iPod シリーズの歴史に幕を下ろしました。これを受けて iPod の思い出や音楽プレーヤーの現状や未来についてお話しました。'
 date: 2022-05-11 6:00:00 +0900
 layout: episode

@@ -1,11 +1,11 @@
 ---
-title: 'Episode 1: iPod touch 生産終了'
-description: ありがとう、iPod。使ったことないけど。
+title: 'iPod のこりこり'
+description: 'iPod touch が生産終了し、Apple はようやく iPod シリーズの歴史に幕を下ろしました。これを受けて iPod の思い出や音楽プレーヤーの現状や未来についてお話しました。'
 date: 2022-05-11 6:00:00 +0900
 layout: episode
 duration: '00:17:48'
 filename: ep1.mp3
-filesize: 9044386
+filesize: '9049115'
 permalink: /1/
 chapters:
   -

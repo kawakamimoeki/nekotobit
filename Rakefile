@@ -36,8 +36,8 @@ task :convert, ['ep', 'title', 'description'] do |_, args|
 end
 
 desc "Upload mp3"
-task :upload, ['mp3'] do |_, args|
-  `gsutil cp #{args.mp3} gs://nekotobit-episodes/`
+task :upload, ['ep'] do |_, args|
+  `gsutil cp audio/ep#{args.ep}.mp3 gs://nekotobit-episodes/`
 end
 
 namespace :transcript do

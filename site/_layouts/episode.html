@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<p><time class="text-sm opacity-50" datetime="{{ page.date }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
 <h2 class="font-bold text-xl mb-5">{{ page.title }}</h2>
 <audio class="w-full mb-5" controls src="{{ site.download_url }}/{{ page.filename }}"></audio>
 

@@ -23,7 +23,7 @@ task :convert, ['ep', 'title', 'description'] do |_, args|
 
   `mp3gain -r #{mp3}`
 
-  `mp3chaps -i #{mp3}`
+  # `mp3chaps -i #{mp3}`
 
   date = Time.current.beginning_of_week(:wednesday).since(1.week).strftime("%Y-%m-%d")
   filesize = File.size(mp3)
